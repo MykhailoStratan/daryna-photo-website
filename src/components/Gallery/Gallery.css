@@ -1,0 +1,10 @@
+.gallery-image {
+    width: 100vw;
+    height: 100vh;
+}
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: 100vh !important;
+    /* width: 100vw !important; */
+    object-fit: cover;
+}

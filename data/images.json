@@ -1,0 +1,158 @@
+[
+  {
+    "key": "photo-1",
+    "src": "/9.jpg",
+    "width": 4672,
+    "height": 7008,
+    "alt": "Nature Scene",
+    "title": "Sunset over the mountains",
+    "srcSet": [
+      { "src": "/9.jpg", "width": 4672, "height": 7008 },
+      { "src": "/9-large.jpg", "width": 7000, "height": 10500 },
+      { "src": "/9-medium.jpg", "width": 3500, "height": 5250 }
+    ]
+  },
+  {
+    "key": "photo-2",
+    "src": "/2.jpg",
+    "width": 4672,
+    "height": 7008,
+    "alt": "City Skyline",
+    "title": "Cityscape at night",
+    "srcSet": [
+      { "src": "/2.jpg", "width": 4672, "height": 7008 },
+      { "src": "/2-large.jpg", "width": 7000, "height": 10500 },
+      { "src": "/2-medium.jpg", "width": 3500, "height": 5250 }
+    ]
+  },
+  {
+    "key": "photo-3",
+    "src": "/3.jpg",
+    "width": 4184,
+    "height": 6276,
+    "alt": "Beach Sunset",
+    "title": "Relaxing sunset on the beach",
+    "srcSet": [
+      { "src": "/3.jpg", "width": 4184, "height": 6276 },
+      { "src": "/3-large.jpg", "width": 6276, "height": 9414 },
+      { "src": "/3-medium.jpg", "width": 3000, "height": 4500 }
+    ]
+  },
+  {
+    "key": "photo-4",
+    "src": "/4.jpg",
+    "width": 4672,
+    "height": 7008,
+    "alt": "Mountain View",
+    "title": "Scenic mountain landscape",
+    "srcSet": [
+      { "src": "/4.jpg", "width": 4672, "height": 7008 },
+      { "src": "/4-large.jpg", "width": 7000, "height": 10500 },
+      { "src": "/4-medium.jpg", "width": 3500, "height": 5250 }
+    ]
+  },
+  {
+    "key": "photo-5",
+    "src": "/5.jpg",
+    "width": 4672,
+    "height": 7008,
+    "alt": "Forest Pathway",
+    "title": "Trail through the forest",
+    "srcSet": [
+      { "src": "/5.jpg", "width": 4672, "height": 7008 },
+      { "src": "/5-large.jpg", "width": 7000, "height": 10500 },
+      { "src": "/5-medium.jpg", "width": 3500, "height": 5250 }
+    ]
+  },
+  {
+    "key": "photo-6",
+    "src": "/6.jpg",
+    "width": 4379,
+    "height": 6568,
+    "alt": "Urban Park",
+    "title": "Park in the heart of the city",
+    "srcSet": [
+      { "src": "/6.jpg", "width": 4379, "height": 6568 },
+      { "src": "/6-large.jpg", "width": 6568, "height": 9852 },
+      { "src": "/6-medium.jpg", "width": 3500, "height": 5250 }
+    ]
+  },
+  {
+    "key": "photo-7",
+    "src": "/7.jpg",
+    "width": 3678,
+    "height": 5517,
+    "alt": "River Reflection",
+    "title": "Reflections on the river",
+    "srcSet": [
+      { "src": "/7.jpg", "width": 3678, "height": 5517 },
+      { "src": "/7-large.jpg", "width": 5517, "height": 8275 },
+      { "src": "/7-medium.jpg", "width": 3000, "height": 4500 }
+    ]
+  },
+  {
+    "key": "photo-8",
+    "src": "/8.jpg",
+    "width": 2967,
+    "height": 4450,
+    "alt": "New Photo Description",
+    "title": "New Photo Title",
+    "srcSet": [
+      { "src": "/8.jpg", "width": 2967, "height": 4450 },
+      { "src": "/8-large.jpg", "width": 4450, "height": 6675 },
+      { "src": "/8-medium.jpg", "width": 2000, "height": 3000 }
+    ]
+  },
+  {
+    "key": "photo-9",
+    "src": "/9.jpg",
+    "width": 3843,
+    "height": 5765,
+    "alt": "Another Photo Description",
+    "title": "Another Photo Title",
+    "srcSet": [
+      { "src": "/9.jpg", "width": 3843, "height": 5765 },
+      { "src": "/9-large.jpg", "width": 5765, "height": 8648 },
+      { "src": "/9-medium.jpg", "width": 3000, "height": 4500 }
+    ]
+  },
+  {
+    "key": "photo-10",
+    "src": "/10.jpg",
+    "width": 3972,
+    "height": 2648,
+    "alt": "Fresh Photo Description",
+    "title": "Fresh Photo Title",
+    "srcSet": [
+      { "src": "/10.jpg", "width": 3972, "height": 2648 },
+      { "src": "/10-large.jpg", "width": 5958, "height": 3969 },
+      { "src": "/10-medium.jpg", "width": 2000, "height": 1333 }
+    ]
+  },
+  {
+    "key": "photo-11",
+    "src": "/11.jpg",
+    "width": 4359,
+    "height": 2906,
+    "alt": "Latest Photo Description",
+    "title": "Latest Photo Title",
+    "srcSet": [
+      { "src": "/11.jpg", "width": 4359, "height": 2906 },
+      { "src": "/11-large.jpg", "width": 6539, "height": 4359 },
+      { "src": "/11-medium.jpg", "width": 3000, "height": 2000 }
+    ]
+  },
+  {
+    "key": "photo-12",
+    "src": "/12.jpg",
+    "width": 4672,
+    "height": 7008,
+    "alt": "Newest Photo Description",
+    "title": "Newest Photo Title",
+    "srcSet": [
+      { "src": "/12.jpg", "width": 4672, "height": 7008 },
+      { "src": "/12-large.jpg", "width": 7008, "height": 10512 },
+      { "src": "/12-medium.jpg", "width": 3500, "height": 5250 }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+.card-custom-menu {
+    display: block;
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    top: 0px;
+}
+
+.p-menubar {
+    background-color: transparent;
+    border: none;
+    justify-content: center
+}
+
+.p-menuitem-content a span{
+    color: rgb(0, 0, 0);
+}
