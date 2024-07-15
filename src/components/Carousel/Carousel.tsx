@@ -13,37 +13,52 @@ type Photo = {
 
 const images = [
     {
-        original: "/1.jpg",
+        original: "/portraits2_photo.jpg",
         thumbnail: "",
         originalClass: "gallery-image",
     },
     {
-        original: "/2.jpg",
+        original: "/portraits9_photo.jpg",
         thumbnail: "",
         originalClass: "gallery-image",
     },
     {
-        original: "/3.jpg",
+        original: "/portraits6_photo.jpg",
         thumbnail: "",
         originalClass: "gallery-image",
     },
     {
-        original: "/4.jpg",
+        original: "/portraits5_photo.jpg",
         thumbnail: "",
         originalClass: "gallery-image",
     },
     {
-        original: "/5.jpg",
+        original: "/portraits4_photo.jpg",
         thumbnail: "",
         originalClass: "gallery-image",
     },
     {
-        original: "/6.jpg",
+        original: "/portraits3_photo.jpg",
         thumbnail: "",
         originalClass: "gallery-image",
     },
     {
-        original: "/7.jpg",
+        original: "/portraits10_photo.jpg",
+        thumbnail: "",
+        originalClass: "gallery-image",
+    },
+    {
+        original: "/portraits7_photo.jpg",
+        thumbnail: "",
+        originalClass: "gallery-image",
+    },
+    {
+        original: "/portraits11_photo.jpg",
+        thumbnail: "",
+        originalClass: "gallery-image",
+    },
+    {
+        original: "/portraits12_photo.jpg",
         thumbnail: "",
         originalClass: "gallery-image",
     },

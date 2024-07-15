@@ -47,9 +47,10 @@ section {
 }
 
 .gallery-section {
+  padding-top: 5rem;
   margin: 0 auto;
   width: 95vw;
-  height: calc(100vh - 6rem);
+  height: calc(auto - 6rem);
   /* padding-left: 2em;
   padding-right: 2em; */
   z-index: 100;
@@ -132,11 +133,14 @@ h2 {
   cursor: pointer;
 }
 
+.package-section h1 {
+  padding-top: 5rem;
+}
+
 .package-block {
   margin: 0 auto;
   width: fit-content;
   padding-top: 5rem;
-  padding-bottom: 5rem;
   display: grid;
   grid-template-columns: 350px 350px;
   column-gap: 5rem;
@@ -207,6 +211,7 @@ table th:nth-child(3), td:nth-child(3) {
 }
 
 .contact-section {
+  margin-top: 5rem;
   height: calc(100vh - 6rem);
 }
 
@@ -236,6 +241,14 @@ form button {
   margin: 0 auto;
   width: 10rem;
 }
+
+.contact-social {
+  width: 100vw !important;
+  justify-content: center !important;
+  padding-top: 4rem !important;
+}
+
+
 
 @media screen and (max-width: 600px) {
   body {

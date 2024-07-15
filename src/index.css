@@ -19,8 +19,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 ul {
   margin: 0;
+  list-style: none;
 }
 
 * {

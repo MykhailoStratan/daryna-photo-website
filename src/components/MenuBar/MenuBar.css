@@ -35,16 +35,21 @@
     display: flex;
     width: 7rem;
     padding: 0;
-    margin-right: 2rem;
+    margin-right: 4rem;
     justify-content: space-between;
 }
 
 .social-media-icon {
     width: 1.5rem;
+    margin-left: 1rem;
     /* margin-right: 0.5rem; */
     filter: invert(0.3);
 }
 
 .logo-wrapper {
     width: 7rem;
+}
+
+.p-menubar-start {
+    width: 180px;
 }

@@ -1,0 +1,7 @@
+.card-carousel {
+    max-height: 90vh !important;
+}
+
+.p-galleria-item-prev, .p-galleria-item-next {
+    width: 60px;
+}

@@ -18,10 +18,16 @@
     width: 1rem;
     height: 1rem;
     border: none;
+    
 }
 
 .p-link:focus {
     outline: none;
+    
+}
+
+.p-highlight .p-link {
+    background-color: #6193d5;;
 }
 
 .p-carousel-next, .p-carousel-prev  {

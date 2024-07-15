@@ -27,9 +27,9 @@ import { Image } from 'primereact/image';
 import { FloatLabel } from "primereact/floatlabel";
 import { Fieldset } from 'primereact/fieldset';
 import ImageGallery from "react-image-gallery";
-import { Gallery } from './components/Gallery/Gallery';
 import Carousel from './components/Carousel/Carousel';
 import { InputTextarea } from 'primereact/inputtextarea';
+import { GalleriaDemo } from './components/Galleria/Galleria';
 
 const photoGallery = [
   {
@@ -167,17 +167,19 @@ function App() {
     ),[]
   );
 
+  
+
   return (
     <div className="App">
       
-      <section className="main-section">
+      <section className="main-section" id='home'>
         <MenuBar/>
-        <Gallery/>
+        <GalleriaDemo/>
         
       </section>
 
         {/* <Divider /> */}
-      <section className="gallery-section">
+      <section className="gallery-section" id='gallery'>
         {/* <h1>Portfolio</h1> */}
         <h2>Shoot portraits / fashion / lifestyle / weddings </h2>
         <h2>in Vancouver and Lower Mainland</h2>
@@ -194,8 +196,8 @@ function App() {
             plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
           />
       </section>
-      <section className="package-section">
-        <h2>Package Pricing</h2>
+      <section className="package-section" id='pricing'>
+        <h1>Package Pricing</h1>
         <div className="package-block">
           <Image src={'/portraits_photo.jpg'} width='350px'/>
           <div className="package-description">
@@ -261,7 +263,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="contact-section">
+      <section className="contact-section" id='contact'>
         <h1>Book a photoshot</h1>
         <p>Send me your contacts with a short description of your desirable photosession and I will contact you within 24 hours.</p>
         <p>Let's save your most precious moments together!</p>
@@ -292,6 +294,28 @@ function App() {
           </div>
           <button>Send</button>    
         </form>
+        <ul className='contact-social social-media-wrapper'>
+            <li className="social-media-item">
+                <a href="">
+                    <img src="/instagram_icon.png" alt="instagram" className="social-media-icon" />
+                </a>
+            </li>
+            <li className="social-media-item">
+                <a href="">
+                    <img src="/facebook_icon.png" alt="facebook" className="social-media-icon" />
+                </a>
+            </li>
+            <li className="social-media-item">
+                <a href="">
+                    <img src="/telegram_icon.png" alt="telegram" className="social-media-icon" />
+                </a>
+            </li>
+            <li className="social-media-item">
+                <a href="">
+                    <img src="/linkedin_icon.png" alt="linkedin" className="social-media-icon" />
+                </a>
+            </li>
+        </ul>
       </section>
     </div>
   );

@@ -12,47 +12,23 @@ export default function MenuBar() {
     const items: MenuItem[] = [
         {
             label: 'Home',
-            icon: 'pi pi-home'
+            icon: 'pi pi-home',
+            url: '#home'
         },
         {
-            label: 'Features',
-            icon: 'pi pi-star'
+            label: 'Gallery',
+            icon: 'pi pi-star',
+            url: '#gallery'
         },
         {
-            label: 'Projects',
+            label: 'Pricing',
             icon: 'pi pi-search',
-            items: [
-                {
-                    label: 'Components',
-                    icon: 'pi pi-bolt'
-                },
-                {
-                    label: 'Blocks',
-                    icon: 'pi pi-server'
-                },
-                {
-                    label: 'UI Kit',
-                    icon: 'pi pi-pencil'
-                },
-                {
-                    label: 'Templates',
-                    icon: 'pi pi-palette',
-                    items: [
-                        {
-                            label: 'Apollo',
-                            icon: 'pi pi-palette'
-                        },
-                        {
-                            label: 'Ultima',
-                            icon: 'pi pi-palette'
-                        }
-                    ]
-                }
-            ]
+            url: '#pricing'
         },
         {
             label: 'Contact',
-            icon: 'pi pi-envelope'
+            icon: 'pi pi-envelope',
+            url: '#contact'
         }
     ];
 
