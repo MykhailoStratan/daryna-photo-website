@@ -24,9 +24,12 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import { Divider } from 'primereact/divider';
 import { Image } from 'primereact/image';
+import { FloatLabel } from "primereact/floatlabel";
 import { Fieldset } from 'primereact/fieldset';
 import ImageGallery from "react-image-gallery";
 import { Gallery } from './components/Gallery/Gallery';
+import Carousel from './components/Carousel/Carousel';
+import { InputTextarea } from 'primereact/inputtextarea';
 
 const photoGallery = [
   {
@@ -143,6 +146,10 @@ const photoGallery = [
 
 function App() {
   const [index, setIndex] = useState(-1);
+  const [valueName, setValueName] = useState<string>('');
+  const [valueEmail, setValueEmail] = useState<string>('');
+  const [valuePhone, setValuePhone] = useState<string>('');
+  const [valueDescription, setValueDescription] = useState<string>('');
 
   const renderPhoto = React.useCallback(
     ({ imageProps: { alt, style, src, ...rest } }: RenderPhotoProps) => (
@@ -164,17 +171,20 @@ function App() {
     <div className="App">
       
       <section className="main-section">
+        <MenuBar/>
         <Gallery/>
-        <MenuBar />
-        <Image src='../daryna-logo.png' width='250'imageStyle={{position: 'absolute', top: '-50px', left: '-20px', filter: 'invert(0.2)'}}/>
+        
       </section>
 
-        <Divider />
-
-      
+        {/* <Divider /> */}
       <section className="gallery-section">
         {/* <h1>Portfolio</h1> */}
-          <PhotoAlbum layout="columns" photos={photoGallery} renderPhoto={renderPhoto} onClick={({ index }) => setIndex(index)}/>
+        <h2>Shoot portraits / fashion / lifestyle / weddings </h2>
+        <h2>in Vancouver and Lower Mainland</h2>
+        <p>Never miss a moment</p>
+        <button className='btn-standard'>Let's make this happen</button>
+        <Carousel/>
+          {/* <PhotoAlbum layout="columns" photos={photoGallery} renderPhoto={renderPhoto} onClick={({ index }) => setIndex(index)}/> */}
           <Lightbox
             slides={photoGallery}
             open={index >= 0}
@@ -183,7 +193,105 @@ function App() {
             // enable optional lightbox plugins
             plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
           />
-        
+      </section>
+      <section className="package-section">
+        <h2>Package Pricing</h2>
+        <div className="package-block">
+          <Image src={'/portraits_photo.jpg'} width='350px'/>
+          <div className="package-description">
+            <h3>Portrait / Lifestyle photosession</h3>
+            <p><span>Service - </span><span>Studio*/indoor/outdoor session</span></p>
+            <p className='note'><span>*Studio price not included</span></p>
+            <table>
+              <tr>
+                <th>Time</th>
+                <th>Result</th>
+                <th>Price</th>
+                <th>Link</th>
+              </tr>
+              <tr>
+                <td>1 hour</td>
+                <td>~50 edited photos, 10 retouched</td>
+                <td>200$</td>
+                <td><button>Book</button></td>
+              </tr>
+              <tr>
+                <td>2 hours</td>
+                <td>~100 photos, 25 retouced</td>
+                <td>350$</td>
+                <td><button>Book</button></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div className="package-block">
+          <div className="package-description">
+            <h3>Wedding / Elopement / Engagement / Event </h3>
+            <p><span>Service - </span><span>a separate plan for each occasion will be created and discussed in details</span></p>
+            {/* <p className='note'><span>*Studio price not included</span></p> */}
+            <table>
+              <tr>
+                <th>Time</th>
+                <th>Result</th>
+                <th>Price</th>
+                <th>Link</th>
+              </tr>
+              <tr>
+                <td>half of day</td>
+                <td>unlimited photo count</td>
+                <td>from 750$</td>
+                <td><button>Book</button></td>
+              </tr>
+              <tr>
+                <td>whole day</td>
+                <td>unlimited photo count</td>
+                <td>from 1500$</td>
+                <td><button>Book</button></td>
+              </tr>
+            </table>
+          </div>
+          <Image src={'/wedding3_photo.jpg'} width='350px'/>
+        </div>
+        <div className="package-block">
+          <Image src={'/commercial_photo.jpg'} width='350px'/>
+          <div className="package-description">
+            <h3>Commercial projects</h3>
+            <p>Ready for a short-term and long-term commercial projects</p>
+            <button className='commercial-btn'>Contact for details</button>
+          </div>
+        </div>
+      </section>
+      <section className="contact-section">
+        <h1>Book a photoshot</h1>
+        <p>Send me your contacts with a short description of your desirable photosession and I will contact you within 24 hours.</p>
+        <p>Let's save your most precious moments together!</p>
+        <form action="">
+          <div className="card-input">
+              <FloatLabel>
+                  <InputText id="name" value={valueName} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValueName(e.target.value)} />
+                  <label htmlFor="name">Name</label>
+              </FloatLabel>
+          </div>
+          <div className="card-input">
+              <FloatLabel>
+                  <InputText id="email" keyfilter="email" value={valueEmail} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValueEmail(e.target.value)} />
+                  <label htmlFor="email">Email</label>
+              </FloatLabel>
+          </div>
+          <div className="card-input">
+              <FloatLabel>
+                  <InputText id="phone number" keyfilter={/^[+]?(d{1,12})?$/} validateOnly value={valuePhone} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValuePhone(e.target.value)} />
+                  <label htmlFor="phone number">Phone number</label>
+              </FloatLabel>
+          </div>
+          <div className="card-input">
+              <FloatLabel>
+                  <InputTextarea id="description" value={valueDescription} onChange={(e) => setValueDescription(e.target.value)} rows={5} cols={30} />
+                  <label htmlFor="decription">Description</label>
+              </FloatLabel>
+          </div>
+          <button>Send</button>    
+        </form>
       </section>
     </div>
   );

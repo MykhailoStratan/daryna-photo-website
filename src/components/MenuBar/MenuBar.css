@@ -1,19 +1,50 @@
 .card-custom-menu {
-    display: block;
-    width: 100%;
+    display: flex;
+    width: 100vw;
     padding: 0;
     background-color: transparent;
     border: none;
     position: fixed;
     top: 0px;
+    z-index: 1000;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 5rem;
+    justify-content: center;
+    border-radius: 0;
+    filter: drop-shadow(0 0.01rem 0.3rem rgb(210, 210, 210));
 }
 
 .p-menubar {
+    display: flex;
     background-color: transparent;
     border: none;
-    justify-content: center
+    justify-content: space-between;
+    padding: 0;
 }
 
 .p-menuitem-content a span{
     color: rgb(0, 0, 0);
+}
+
+.p-menubar-end {
+    margin: 0;
+}
+
+.social-media-wrapper {
+    display: flex;
+    width: 7rem;
+    padding: 0;
+    margin-right: 2rem;
+    justify-content: space-between;
+}
+
+.social-media-icon {
+    width: 1.5rem;
+    /* margin-right: 0.5rem; */
+    filter: invert(0.3);
+}
+
+.logo-wrapper {
+    width: 7rem;
 }
