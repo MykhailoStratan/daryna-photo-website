@@ -5,3 +5,9 @@
 .p-galleria-item-prev, .p-galleria-item-next {
     width: 60px;
 }
+
+@media screen and (max-width: 600px) {
+
+    
+
+}

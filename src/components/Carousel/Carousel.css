@@ -49,3 +49,25 @@
     filter: drop-shadow(0 0.1rem 0.1rem rgb(130, 130, 130));
     border-radius: 25px;
 }
+
+@media screen and (max-width: 600px) {
+
+    .p-carousel-items-content .p-image img {
+        width: calc(100vw - 70px);
+        top: -1.5rem !important;
+        left: -2rem;
+    }
+
+    .p-carousel-next, .p-carousel-prev  {
+        width: 20px
+    }
+
+    .card-carousel {
+        padding-top: 3rem;
+    }
+
+    .btn-standard {
+        padding: 0.5rem 1rem;
+    }
+
+}

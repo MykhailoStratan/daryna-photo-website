@@ -86,6 +86,11 @@ export default function ResponsiveDemo() {
             breakpoint: '830px',
             numVisible: 1,
             numScroll: 1
+        },
+        {
+            breakpoint: '630px',
+            numVisible: 1,
+            numScroll: 1
         }
     ];
 
@@ -93,7 +98,7 @@ export default function ResponsiveDemo() {
     const productTemplate = (product: Photo) => {
         return (
             <div className="border-1 surface-border border-round m-2 text-center py-5 px-3">
-                <Image src={product.original} width='340rem' />
+                <Image src={product.original} width='340px' />
             </div>
         );
     };

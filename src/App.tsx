@@ -181,10 +181,10 @@ function App() {
         {/* <Divider /> */}
       <section className="gallery-section" id='gallery'>
         {/* <h1>Portfolio</h1> */}
-        <h2>Shoot portraits / fashion / lifestyle / weddings </h2>
-        <h2>in Vancouver and Lower Mainland</h2>
+        <h1>Shoot portraits / fashion / lifestyle / weddings </h1>
+        <h1>in Vancouver and Lower Mainland</h1>
         <p>Never miss a moment</p>
-        <button className='btn-standard'>Let's make this happen</button>
+        <a href='#contact'><button className='btn-standard'>Let's make this happen</button></a>
         <Carousel/>
           {/* <PhotoAlbum layout="columns" photos={photoGallery} renderPhoto={renderPhoto} onClick={({ index }) => setIndex(index)}/> */}
           <Lightbox
@@ -215,13 +215,13 @@ function App() {
                 <td>1 hour</td>
                 <td>~50 edited photos, 10 retouched</td>
                 <td>200$</td>
-                <td><button>Book</button></td>
+                <td><a href="#contact"><button>Book</button></a></td>
               </tr>
               <tr>
                 <td>2 hours</td>
                 <td>~100 photos, 25 retouced</td>
                 <td>350$</td>
-                <td><button>Book</button></td>
+                <td><a href="#contact"><button>Book</button></a></td>
               </tr>
             </table>
           </div>
@@ -242,13 +242,13 @@ function App() {
                 <td>half of day</td>
                 <td>unlimited photo count</td>
                 <td>from 750$</td>
-                <td><button>Book</button></td>
+                <td><a href="#contact"><button>Book</button></a></td>
               </tr>
               <tr>
                 <td>whole day</td>
                 <td>unlimited photo count</td>
                 <td>from 1500$</td>
-                <td><button>Book</button></td>
+                <td><a href="#contact"><button>Book</button></a></td>
               </tr>
             </table>
           </div>
@@ -259,7 +259,75 @@ function App() {
           <div className="package-description">
             <h3>Commercial projects</h3>
             <p>Ready for a short-term and long-term commercial projects</p>
-            <button className='commercial-btn'>Contact for details</button>
+            <a href="#contact"><button className='commercial-btn'>Contact for details</button></a>
+          </div>
+        </div>
+
+        <div className="package-block-mobile" style={{display: 'none'}}>
+          
+          <div className="package-description">
+            <h3>Portrait / Lifestyle photosession</h3>
+            <p><span>Service - </span><span>Studio*/indoor/outdoor session</span></p>
+            <p className='note'><span>*Studio price not included</span></p>
+            
+          </div>
+          <Image src={'/portraits_photo.jpg'} width='350px'/>
+          <table>
+              <tr>
+                <th>Time</th>
+                <th>Result</th>
+                <th>Price</th>
+                <th>Link</th>
+              </tr>
+              <tr>
+                <td>1 hour</td>
+                <td>~50 edited photos, 10 retouched</td>
+                <td>200$</td>
+                <td><a href="#contact"><button>Book</button></a></td>
+              </tr>
+              <tr>
+                <td>2 hours</td>
+                <td>~100 photos, 25 retouced</td>
+                <td>350$</td>
+                <td><a href="#contact"><button>Book</button></a></td>
+              </tr>
+            </table>
+        </div>
+        <div className="package-block-mobile" style={{display: 'none'}}>
+          <div className="package-description">
+            <h3>Wedding / Elopement / Engagement / Event </h3>
+            <p><span>Service - </span><span>a separate plan for each occasion will be created and discussed in details</span></p>
+            {/* <p className='note'><span>*Studio price not included</span></p> */}
+            
+          </div>
+          <Image src={'/wedding3_photo.jpg'} width='350px'/>
+          <table>
+              <tr>
+                <th>Time</th>
+                <th>Result</th>
+                <th>Price</th>
+                <th>Link</th>
+              </tr>
+              <tr>
+                <td>half of day</td>
+                <td>unlimited photo count</td>
+                <td>from 750$</td>
+                <td><a href="#contact"><button>Book</button></a></td>
+              </tr>
+              <tr>
+                <td>whole day</td>
+                <td>unlimited photo count</td>
+                <td>from 1500$</td>
+                <td><a href="#contact"><button>Book</button></a></td>
+              </tr>
+            </table>
+        </div>
+        <div className="package-block-mobile" style={{display: 'none'}}>
+          <div className="package-description">
+            <h3>Commercial projects</h3>
+            <p>Ready for a short-term and long-term commercial projects</p>
+            <Image src={'/commercial_photo.jpg'} width='350px'/>
+            <a href="#contact"><button className='commercial-btn'>Contact for details</button></a>
           </div>
         </div>
       </section>

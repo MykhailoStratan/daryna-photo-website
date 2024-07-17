@@ -137,7 +137,7 @@ h2 {
   padding-top: 5rem;
 }
 
-.package-block {
+.package-block, .package-block-mobile {
   margin: 0 auto;
   width: fit-content;
   padding-top: 5rem;
@@ -251,13 +251,42 @@ form button {
 
 
 @media screen and (max-width: 600px) {
-  body {
+  /* body {
     background-color: olive;
-  }
+  } */
 
   .package-block {
-    display: grid;
+    display: none;
+    
+  }
+
+  .package-block-mobile {
+    padding-top: 2rem;
+    display: grid !important;
     grid-template-columns: 350px;
     column-gap: 5rem;
   }
+
+  .package-block-mobile button {
+    border: solid transparent 1px;
+    border-radius: 35px;
+    padding: 0.25rem 1rem;
+    background-color: #6193d5;
+    color: white;
+  }
+
+  table {
+    margin: 2rem 0;
+  }
+
+  .commercial-btn {
+    margin-top: 2rem !important;
+  }
+
+  .contact-section .social-media-wrapper {
+    display: flex;
+    padding-bottom: 10px;
+  }
+
+  
 }

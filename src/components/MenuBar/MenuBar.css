@@ -53,3 +53,31 @@
 .p-menubar-start {
     width: 180px;
 }
+
+@media screen and (max-width: 600px) {
+    .card-custom-menu {
+        
+    }
+
+    .social-media-wrapper {
+        display: none;
+    }
+
+    .logo-wrapper .p-image img {
+        width: 120px;
+        top: -1.5rem !important;
+        left: -2rem;
+    }
+
+    .p-menubar-button {
+        margin-left: 9rem;
+    }
+
+    .p-menubar-root-list {
+        top: 3.5rem;
+    }
+
+    .p-menuitem-link {
+        justify-content: center;
+    }
+}

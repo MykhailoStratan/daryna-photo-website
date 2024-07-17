@@ -83,3 +83,21 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+
+@media screen and (max-width: 600px) {
+
+  h1 {
+    font-size: 2rem;
+    max-width: 90vw !important; 
+    display: block;
+    white-space: normal;
+  }
+
+  p {
+    max-width: 90vw !important; 
+  }
+
+  
+
+}
