@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, FC } from 'react';
+import { useState, FC } from 'react';
 import { Galleria } from 'primereact/galleria';
 import './Galleria.css'
 
@@ -11,30 +11,30 @@ type Photo = {
 
 const photos = [
     {
-      original: "/landscape1_photo.jpg",
+      original: "https://lh3.googleusercontent.com/pw/AP1GczMJhYrowIh_Ljd_48bNaLNAva-L6helEH-k60E7cFHlxxQdrLEXyYNgC45o_pxmSf0JrWBMNsJTQgHyFoz-SdKfUGkfkglBG47tFXJNyIIpck0TTuQ1YP1vOHYMkUHZOG_lh7hsSuUkGzG8qrar05Fe=w1546-h1031-s-no-gm?authuser=0",
       thumbnail: "",
       originalClass: "gallery-image",
       
     },
     {
-      original: "/landscape4_photo.jpg",
+      original: "https://lh3.googleusercontent.com/pw/AP1GczND_WK21qs2orG3n-VtAzZMQRViBtlHILgqwM7wh9Dv5GHI02a67JkZCsgGMuzQ6uj6gemP_nVtix2DpoGM1YRaVi0PjX9lrLRyV3nY17jnWmfh_O3xr_NrwVLU9TVZZnXu_HJmx-oAvOpkwGllskJo=w1546-h1031-s-no-gm?authuser=0",
       thumbnail: "",
       originalClass: "gallery-image",
     },
     {
-      original: "/landscape2_photo.jpg",
+      original: "https://lh3.googleusercontent.com/pw/AP1GczPf4QeGHU7yROecUM79wNVvC0FUEHlruPBRu5aUcHsrJDQhpZcmz-ZtEkCNHST1_pqy5SRAKDqzA9l3-Ab-CjTMdxBb3yepRfI8edcmbFSupaBX4p8jcoGGT-ZKT-L90wyz5_yKUCVGB9oQtohSFQf9=w1547-h1031-s-no-gm?authuser=0",
       thumbnail: "",
       originalClass: "gallery-image",
     },
     {
-      original: "/landscape3_photo.jpg",
+      original: "https://lh3.googleusercontent.com/pw/AP1GczOFjGC8by1IIO7e7BhgVuS6Rf3-SLp-SJdNSwrRB3tStyvX_m3vL472CNEEsKqSMfA04LWiyRf2HY1DH6Gw1qQwFWpRnnOEsri2Cd5_gSYOhUQNMCYI7nBbaMqkOdrkMrPEXV4BjMPhgzX7o7G_6ASS=w1546-h1031-s-no-gm?authuser=0",
       thumbnail: "",
       originalClass: "gallery-image",
     },
   ];
 
 export const GalleriaDemo: FC = () => {
-    const [images, setImages] = useState(photos)
+    const [images] = useState(photos)
 
 
     const itemTemplate = (item: Photo) => {

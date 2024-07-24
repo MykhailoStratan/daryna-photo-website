@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
 
 // import 'primereact/resources/themes/lara-light-indigo/theme.css'; //theme
@@ -9,10 +7,8 @@ import "primereact/resources/themes/lara-light-cyan/theme.css";
 import 'primeicons/primeicons.css'; //icons
 // import 'primeflex/primeflex.css'; // flex
 import './App.css';
-
 import MenuBar from './components/MenuBar/MenuBar';
 
-import PhotoAlbum, { RenderPhotoProps } from "react-photo-album";
 import React from 'react';
 // import photos from '../data/images.json';
 import Lightbox from "yet-another-react-lightbox";
@@ -22,11 +18,9 @@ import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
-import { Divider } from 'primereact/divider';
+
 import { Image } from 'primereact/image';
 import { FloatLabel } from "primereact/floatlabel";
-import { Fieldset } from 'primereact/fieldset';
-import ImageGallery from "react-image-gallery";
 import Carousel from './components/Carousel/Carousel';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { GalleriaDemo } from './components/Galleria/Galleria';
@@ -151,21 +145,21 @@ function App() {
   const [valuePhone, setValuePhone] = useState<string>('');
   const [valueDescription, setValueDescription] = useState<string>('');
 
-  const renderPhoto = React.useCallback(
-    ({ imageProps: { alt, style, src, ...rest } }: RenderPhotoProps) => (
-      <img
-        alt={alt}
-        style={{
-          ...style,
-          borderRadius: "0px",
-          boxShadow: "0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)",
-          transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-        }}
-        src={src}
-        {...rest}
-      />
-    ),[]
-  );
+  // const renderPhoto = React.useCallback(
+  //   ({ imageProps: { alt, style, src, ...rest } }: RenderPhotoProps) => (
+  //     <img
+  //       alt={alt}
+  //       style={{
+  //         ...style,
+  //         borderRadius: "0px",
+  //         boxShadow: "0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)",
+  //         transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+  //       }}
+  //       src={src}
+  //       {...rest}
+  //     />
+  //   ),[]
+  // );
 
   
 
@@ -199,7 +193,7 @@ function App() {
       <section className="package-section" id='pricing'>
         <h1>Package Pricing</h1>
         <div className="package-block">
-          <Image src={'/portraits_photo.jpg'} width='350px'/>
+          <Image src={'https://lh3.googleusercontent.com/pw/AP1GczPeWCw-Tx2eP7R2PgRice8ARnoB2-NhESHBHklBqYp7aNkdd-y3EQKuN7rm2CO2S4XUihQCqwX7OPl-MuLKAf1cJ0nDOdLhJr1eWow4yiVp-6efJ1WC4W7Actli0ClkPn2rI-iFMVisROuqZNYV0YFB=w687-h1031-s-no-gm?authuser=0'} width='350px'/>
           <div className="package-description">
             <h3>Portrait / Lifestyle photosession</h3>
             <p><span>Service - </span><span>Studio*/indoor/outdoor session</span></p>
@@ -252,10 +246,10 @@ function App() {
               </tr>
             </table>
           </div>
-          <Image src={'/wedding3_photo.jpg'} width='350px'/>
+          <Image src={'https://lh3.googleusercontent.com/pw/AP1GczPeirh5s5YeKSbuj14BLwrBqys-DdMI4NgLrV3U8L3tHApZ8hnDgF3TXh3ZOvdK7YOc6mh183doTPjvf5XczVXnsea34i731tx4sxd4iCUw06RnaBgPGi0lJdxh6ENVAj2gdUW7ckmAspckY87wWV0g=w688-h1031-s-no-gm?authuser=0'} width='350px'/>
         </div>
         <div className="package-block">
-          <Image src={'/commercial_photo.jpg'} width='350px'/>
+          <Image src={'https://lh3.googleusercontent.com/pw/AP1GczMWGmYKVhZ5Kg_vC7s2Zp3CcvcX3z6IYfZ-j6lR0YHARw0kcGil-5VWEOmoP2KJk51EYL9XLxbXHAqrC_sgcN-1rmoaJQrNvt48lYC_9YMC4pZ-RqYFtjPv5KcYMwj29MBxJzFBOOtOx4E_EAxetsx5=w825-h1031-s-no-gm?authuser=0'} width='350px'/>
           <div className="package-description">
             <h3>Commercial projects</h3>
             <p>Ready for a short-term and long-term commercial projects</p>
@@ -271,7 +265,7 @@ function App() {
             <p className='note'><span>*Studio price not included</span></p>
             
           </div>
-          <Image src={'/portraits_photo.jpg'} width='350px'/>
+          <Image src={'https://lh3.googleusercontent.com/pw/AP1GczPeWCw-Tx2eP7R2PgRice8ARnoB2-NhESHBHklBqYp7aNkdd-y3EQKuN7rm2CO2S4XUihQCqwX7OPl-MuLKAf1cJ0nDOdLhJr1eWow4yiVp-6efJ1WC4W7Actli0ClkPn2rI-iFMVisROuqZNYV0YFB=w687-h1031-s-no-gm?authuser=0'} width='350px'/>
           <table>
               <tr>
                 <th>Time</th>
@@ -300,7 +294,7 @@ function App() {
             {/* <p className='note'><span>*Studio price not included</span></p> */}
             
           </div>
-          <Image src={'/wedding3_photo.jpg'} width='350px'/>
+          <Image src={'https://lh3.googleusercontent.com/pw/AP1GczPeirh5s5YeKSbuj14BLwrBqys-DdMI4NgLrV3U8L3tHApZ8hnDgF3TXh3ZOvdK7YOc6mh183doTPjvf5XczVXnsea34i731tx4sxd4iCUw06RnaBgPGi0lJdxh6ENVAj2gdUW7ckmAspckY87wWV0g=w688-h1031-s-no-gm?authuser=0'} width='350px'/>
           <table>
               <tr>
                 <th>Time</th>
@@ -326,7 +320,7 @@ function App() {
           <div className="package-description">
             <h3>Commercial projects</h3>
             <p>Ready for a short-term and long-term commercial projects</p>
-            <Image src={'/commercial_photo.jpg'} width='350px'/>
+            <Image src={'https://lh3.googleusercontent.com/pw/AP1GczMWGmYKVhZ5Kg_vC7s2Zp3CcvcX3z6IYfZ-j6lR0YHARw0kcGil-5VWEOmoP2KJk51EYL9XLxbXHAqrC_sgcN-1rmoaJQrNvt48lYC_9YMC4pZ-RqYFtjPv5KcYMwj29MBxJzFBOOtOx4E_EAxetsx5=w825-h1031-s-no-gm?authuser=0'} width='350px'/>
             <a href="#contact"><button className='commercial-btn'>Contact for details</button></a>
           </div>
         </div>

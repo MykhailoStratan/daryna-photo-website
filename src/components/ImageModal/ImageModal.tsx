@@ -1,5 +1,5 @@
 
-import React from 'react'; 
+
 import { Image } from 'primereact/image';
 import { FC } from "react";
 import '../ImageModal/ImageModal.css';

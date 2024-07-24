@@ -1,12 +1,10 @@
 
-import React from 'react'; 
+
 import { Menubar } from 'primereact/menubar';
 import { MenuItem } from 'primereact/menuitem';
 import { Image } from 'primereact/image';
 import '../MenuBar/MenuBar.css';
 
-import PhotoAlbum from "react-photo-album";
-import photos from '../../../data/images.json';
 
 export default function MenuBar() {
     const items: MenuItem[] = [
