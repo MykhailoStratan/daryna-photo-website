@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { InputText } from 'primereact/inputtext';
 
 // import 'primereact/resources/themes/lara-light-indigo/theme.css'; //theme
@@ -136,14 +136,62 @@ const photoGallery = [
   }
 ];
 
+import emailjs from '@emailjs/browser';
 
+interface FormElements extends HTMLFormControlsCollection {
+    usernameInput: HTMLInputElement,
+    usernameEmail: HTMLInputElement,
+    usernameNumber: HTMLInputElement,
+    usernameMessage: HTMLInputElement,
+
+}
+interface UsernameFormElement extends HTMLFormElement {
+    readonly elements: FormElements
+}
 
 function App() {
+  const [sendButtonText, setSendButtonText] = useState("Send");
+
   const [index, setIndex] = useState(-1);
   const [valueName, setValueName] = useState<string>('');
   const [valueEmail, setValueEmail] = useState<string>('');
   const [valuePhone, setValuePhone] = useState<string>('');
   const [valueDescription, setValueDescription] = useState<string>('');
+
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = async (event: React.FormEvent) => {
+    event.preventDefault();
+    if (sendButtonText === "Message sent!") {
+      return;
+    }
+    // service_id, templte_id and public key will get from Emailjs website when you create account and add template service and email service
+
+    const checkFields = form.current?.querySelector<UsernameFormElement>('#usernameInput')?.value && 
+        form.current?.querySelector<HTMLInputElement>('#usernameEmail')?.value && 
+        form.current?.querySelector<HTMLInputElement>('#usernameNumber')?.value;
+    if (checkFields) {
+        console.log('everything filled')
+        console.log(form.current?.querySelector<HTMLInputElement>('#usernameEmail')?.value)
+        await emailjs.send('service_xb3e2hb', 'template_v05ze2p', {from_name: valueName, message: valueDescription, phone_number: valuePhone, email: valueEmail}, 
+          'z1YXTwT-sFp7R5tpZ')
+          .then((result) => {
+              console.log(result.text, result.status, result.text);
+              setSendButtonText('Message sent!');
+          }, (error) => {
+              console.log(error.text);
+          });
+    } else {
+        console.log('nuhia')
+    }
+    
+  };  
+
+  const refreshSendButton = () => {
+    if (sendButtonText === "Message sent!") {
+      setSendButtonText("Send");
+    }
+  }
 
   // const renderPhoto = React.useCallback(
   //   ({ imageProps: { alt, style, src, ...rest } }: RenderPhotoProps) => (
@@ -329,32 +377,32 @@ function App() {
         <h1>Book a photoshot</h1>
         <p>Send me your contacts with a short description of your desirable photosession and I will contact you within 24 hours.</p>
         <p>Let's save your most precious moments together!</p>
-        <form action="">
+        <form ref={form} onSubmit={(event) => {sendEmail(event), refreshSendButton()}}>
           <div className="card-input">
               <FloatLabel>
-                  <InputText id="name" value={valueName} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValueName(e.target.value)} />
-                  <label htmlFor="name">Name</label>
+                  <InputText id="usernameInput" value={valueName} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValueName(e.target.value)} />
+                  <label htmlFor="usernameInput">Name</label>
               </FloatLabel>
           </div>
           <div className="card-input">
               <FloatLabel>
-                  <InputText id="email" keyfilter="email" value={valueEmail} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValueEmail(e.target.value)} />
-                  <label htmlFor="email">Email</label>
+                  <InputText id="usernameEmail" keyfilter="email" value={valueEmail} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValueEmail(e.target.value)} />
+                  <label htmlFor="usernameEmail">Email</label>
               </FloatLabel>
           </div>
           <div className="card-input">
               <FloatLabel>
-                  <InputText id="phone number" keyfilter={/^[+]?(d{1,12})?$/} validateOnly value={valuePhone} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValuePhone(e.target.value)} />
-                  <label htmlFor="phone number">Phone number</label>
+                  <InputText id="usernameNumber" keyfilter={/^[+]?(d{1,12})?$/} validateOnly value={valuePhone} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValuePhone(e.target.value)} />
+                  <label htmlFor="usernameNumber">Phone number</label>
               </FloatLabel>
           </div>
           <div className="card-input">
               <FloatLabel>
-                  <InputTextarea id="description" value={valueDescription} onChange={(e) => setValueDescription(e.target.value)} rows={5} cols={30} />
-                  <label htmlFor="decription">Description</label>
+                  <InputTextarea id="usernameMessage" value={valueDescription} onChange={(e) => setValueDescription(e.target.value)} rows={5} cols={30} />
+                  <label htmlFor="usernameMessage">Description</label>
               </FloatLabel>
           </div>
-          <button>Send</button>    
+          <input className="submit btn-standard" type="submit" value={sendButtonText} />
         </form>
         <ul className='contact-social social-media-wrapper'>
             <li className="social-media-item">

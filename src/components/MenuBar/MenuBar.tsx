@@ -33,17 +33,17 @@ export default function MenuBar() {
     const end = (
         <ul className='social-media-wrapper'>
             <li className="social-media-item">
-                <a href="">
+                <a href="https://www.instagram.com/d.stoikova.photo?igsh=MWwwdnBndHd1b2w4ZA==" target='_blank'>
                     <img src="/instagram_icon.png" alt="instagram" className="social-media-icon" />
                 </a>
             </li>
             <li className="social-media-item">
-                <a href="">
+                <a href="https://www.facebook.com/profile.php?id=100011219850763" target='_blank'>
                     <img src="/facebook_icon.png" alt="facebook" className="social-media-icon" />
                 </a>
             </li>
             <li className="social-media-item">
-                <a href="">
+                <a href="https://t.me/Daryna_Stoikova" target='_blank'>
                     <img src="/telegram_icon.png" alt="telegram" className="social-media-icon" />
                 </a>
             </li>

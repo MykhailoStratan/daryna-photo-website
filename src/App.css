@@ -237,6 +237,16 @@ form {
   margin-bottom: 2rem;
 }
 
+.submit {
+  width: 10em;
+  padding: 0.5em 0.5em;
+  margin: 0 auto;
+}
+
+.p-inputtextarea, .p-inputtext {
+  width: 15em;
+}
+
 form button {
   margin: 0 auto;
   width: 10rem;
@@ -286,6 +296,10 @@ form button {
   .contact-section .social-media-wrapper {
     display: flex;
     padding-bottom: 10px;
+  }
+
+  form {
+    padding-top: 3rem;
   }
 
   
