@@ -229,6 +229,7 @@ form {
   max-width: 650px;
   flex-direction: column;
   justify-content: center;
+  margin-top: 3em;
 }
 
 .card-input {
@@ -239,8 +240,8 @@ form {
 
 .submit {
   width: 10em;
-  padding: 0.5em 0.5em;
   margin: 0 auto;
+  margin-bottom: 2.5em;
 }
 
 .p-inputtextarea, .p-inputtext {
