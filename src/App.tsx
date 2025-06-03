@@ -223,6 +223,9 @@ function App() {
 
   return (
     <div className="App">
+      <button className='theme-toggle-floating' onClick={toggleDarkMode}>
+        {darkMode ? 'Light' : 'Dark'}
+      </button>
       
       <section className="main-section" id='home'>
         <MenuBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />

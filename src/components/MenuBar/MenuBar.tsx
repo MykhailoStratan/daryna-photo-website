@@ -56,7 +56,6 @@ export default function MenuBar({ darkMode, toggleDarkMode }: MenuBarProps) {
                     </a>
                 </li>
             </ul>
-            <button className='theme-toggle' onClick={toggleDarkMode}>{darkMode ? 'Light' : 'Dark'}</button>
         </div>
     );
 
