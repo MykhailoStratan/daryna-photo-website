@@ -304,5 +304,30 @@ form button {
     padding-top: 3rem;
   }
 
-  
+
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .card-custom-menu {
+  background-color: #333;
+  filter: drop-shadow(0 0.01rem 0.3rem rgb(50, 50, 50));
+}
+
+body.dark-mode .p-menuitem-content a span {
+  color: #e0e0e0;
+}
+
+body.dark-mode .social-media-icon {
+  filter: invert(0.8);
+}
+
+body.dark-mode .btn-standard,
+body.dark-mode .package-description button,
+body.dark-mode form button {
+  background-color: #90caf9;
+  color: #000;
 }
