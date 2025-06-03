@@ -261,7 +261,7 @@ function App() {
               </tr>
               <tr>
                 <td>2 hours</td>
-                <td>~100 photos, 25 retouced</td>
+                <td>~100 photos, 25 retouched</td>
                 <td>350$</td>
                 <td><a href="#contact"><button>Book</button></a></td>
               </tr>
@@ -329,7 +329,7 @@ function App() {
               </tr>
               <tr>
                 <td>2 hours</td>
-                <td>~100 photos, 25 retouced</td>
+                <td>~100 photos, 25 retouched</td>
                 <td>350$</td>
                 <td><a href="#contact"><button>Book</button></a></td>
               </tr>
