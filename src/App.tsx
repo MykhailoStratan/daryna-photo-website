@@ -167,9 +167,11 @@ function App() {
     }
     // service_id, templte_id and public key will get from Emailjs website when you create account and add template service and email service
 
-    const checkFields = form.current?.querySelector<UsernameFormElement>('#usernameInput')?.value && 
-        form.current?.querySelector<HTMLInputElement>('#usernameEmail')?.value && 
-        form.current?.querySelector<HTMLInputElement>('#usernameNumber')?.value;
+    const phoneValue = form.current?.querySelector<HTMLInputElement>('#usernameNumber')?.value;
+    const phoneRegex = /^[+]?(\d{1,12})?$/;
+    const checkFields = form.current?.querySelector<UsernameFormElement>('#usernameInput')?.value &&
+        form.current?.querySelector<HTMLInputElement>('#usernameEmail')?.value &&
+        phoneValue && phoneRegex.test(phoneValue);
     if (checkFields) {
         console.log('everything filled')
         console.log(form.current?.querySelector<HTMLInputElement>('#usernameEmail')?.value)
