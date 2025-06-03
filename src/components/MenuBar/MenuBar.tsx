@@ -3,12 +3,7 @@ import { MenuItem } from 'primereact/menuitem';
 import { Image } from 'primereact/image';
 import '../MenuBar/MenuBar.css';
 
-interface MenuBarProps {
-    darkMode: boolean;
-    toggleDarkMode: () => void;
-}
-
-export default function MenuBar({ darkMode, toggleDarkMode }: MenuBarProps) {
+export default function MenuBar() {
     const items: MenuItem[] = [
         {
             label: 'Home',
@@ -56,7 +51,6 @@ export default function MenuBar({ darkMode, toggleDarkMode }: MenuBarProps) {
                     </a>
                 </li>
             </ul>
-            <button className='theme-toggle' onClick={toggleDarkMode}>{darkMode ? 'Light' : 'Dark'}</button>
         </div>
     );
 
