@@ -35,8 +35,23 @@
     display: flex;
     width: 7rem;
     padding: 0;
-    margin-right: 4rem;
+    margin-right: 0;
     justify-content: space-between;
+}
+
+.end-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 4rem;
+}
+
+.theme-toggle {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: inherit;
+    margin-left: 1rem;
 }
 
 .social-media-icon {
@@ -56,11 +71,15 @@
 
 @media screen and (max-width: 600px) {
     .card-custom-menu {
-        
+
     }
 
     .social-media-wrapper {
         display: none;
+    }
+
+    .theme-toggle {
+        margin-right: 1rem;
     }
 
     .logo-wrapper .p-image img {
