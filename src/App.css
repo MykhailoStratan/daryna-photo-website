@@ -331,3 +331,25 @@ body.dark-mode form button {
   background-color: #90caf9;
   color: #000;
 }
+
+.theme-toggle-floating {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #6193d5;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+body.dark-mode .theme-toggle-floating {
+  background-color: #90caf9;
+  color: #000;
+}

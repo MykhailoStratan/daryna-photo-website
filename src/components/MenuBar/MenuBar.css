@@ -44,12 +44,6 @@
     align-items: center;
 }
 
-.theme-toggle {
-    background: none;
-    border: none;
-    margin-left: 1rem;
-    cursor: pointer;
-}
 
 .social-media-icon {
     width: 1.5rem;
