@@ -392,7 +392,7 @@ function App() {
           </div>
           <div className="card-input">
               <FloatLabel>
-                  <InputText id="usernameNumber" keyfilter={/^[+]?(d{1,12})?$/} validateOnly value={valuePhone} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValuePhone(e.target.value)} />
+                  <InputText id="usernameNumber" keyfilter={/^[+]?(\d{1,12})?$/} validateOnly value={valuePhone} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValuePhone(e.target.value)} />
                   <label htmlFor="usernameNumber">Phone number</label>
               </FloatLabel>
           </div>
