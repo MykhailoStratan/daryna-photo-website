@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { InputText } from 'primereact/inputtext';
 
 // import 'primereact/resources/themes/lara-light-indigo/theme.css'; //theme
@@ -158,6 +158,14 @@ function App() {
   const [valuePhone, setValuePhone] = useState<string>('');
   const [valueDescription, setValueDescription] = useState<string>('');
 
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.body.classList.toggle('dark-mode', darkMode);
+  }, [darkMode]);
+
+  const toggleDarkMode = () => setDarkMode((prev) => !prev);
+
   const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = async (event: React.FormEvent) => {
@@ -217,7 +225,7 @@ function App() {
     <div className="App">
       
       <section className="main-section" id='home'>
-        <MenuBar/>
+        <MenuBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <GalleriaDemo/>
         
       </section>

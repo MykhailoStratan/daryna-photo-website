@@ -95,9 +95,19 @@ button:focus-visible {
   }
 
   p {
-    max-width: 90vw !important; 
+    max-width: 90vw !important;
   }
 
-  
 
+
+}
+
+body {
+  color: #20242d;
+  background-color: #ffffff;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
 }
