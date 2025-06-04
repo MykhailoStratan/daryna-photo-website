@@ -4,16 +4,7 @@ import { InputTextarea } from 'primereact/inputtextarea';
 import { FloatLabel } from 'primereact/floatlabel';
 import emailjs from '@emailjs/browser';
 
-interface FormElements extends HTMLFormControlsCollection {
-  usernameInput: HTMLInputElement;
-  usernameEmail: HTMLInputElement;
-  usernameNumber: HTMLInputElement;
-  usernameMessage: HTMLInputElement;
-}
 
-interface UsernameFormElement extends HTMLFormElement {
-  readonly elements: FormElements;
-}
 
 export default function ContactForm() {
   const [sendButtonText, setSendButtonText] = useState('Send');
