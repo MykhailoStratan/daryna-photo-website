@@ -224,7 +224,7 @@ function App() {
   return (
     <div className="App">
       <button className='theme-toggle-floating' onClick={toggleDarkMode}>
-        {darkMode ? 'Light' : 'Dark'}
+        {darkMode ? <i className="pi pi-sun" /> : <i className="pi pi-moon" />}
       </button>
       
       <section className="main-section" id='home'>
