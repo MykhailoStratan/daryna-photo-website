@@ -1,10 +1,11 @@
 import { Menubar } from 'primereact/menubar';
 import { MenuItem } from 'primereact/menuitem';
 import { Image } from 'primereact/image';
+import { memo, useMemo } from 'react';
 import '../MenuBar/MenuBar.css';
 
-export default function MenuBar() {
-    const items: MenuItem[] = [
+function MenuBar() {
+    const items: MenuItem[] = useMemo(() => [
         {
             label: 'Home',
             icon: 'pi pi-home',
@@ -25,7 +26,7 @@ export default function MenuBar() {
             icon: 'pi pi-envelope',
             url: '#contact'
         }
-    ];
+    ], []);
 
     const end = (
         <div className='end-wrapper'>
@@ -73,4 +74,6 @@ export default function MenuBar() {
         </div>
     )
 }
+
+export default memo(MenuBar);
         

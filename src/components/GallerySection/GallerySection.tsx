@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
@@ -119,7 +119,7 @@ const photoGallery = [
   }
 ];
 
-export default function GallerySection() {
+function GallerySection() {
   const [index, setIndex] = useState(-1);
 
   return (
@@ -139,3 +139,5 @@ export default function GallerySection() {
     </section>
   );
 }
+
+export default memo(GallerySection);

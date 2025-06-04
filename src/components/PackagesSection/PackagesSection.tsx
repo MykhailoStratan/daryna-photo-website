@@ -1,6 +1,7 @@
 import { Image } from 'primereact/image';
+import { memo } from 'react';
 
-export default function PackagesSection() {
+function PackagesSection() {
   return (
     <section className="package-section" id="pricing">
       <h1>Package Pricing</h1>
@@ -133,3 +134,5 @@ export default function PackagesSection() {
     </section>
   );
 }
+
+export default memo(PackagesSection);
