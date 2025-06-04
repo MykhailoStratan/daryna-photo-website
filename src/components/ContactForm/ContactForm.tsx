@@ -1,19 +1,8 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useCallback } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { FloatLabel } from 'primereact/floatlabel';
 import emailjs from '@emailjs/browser';
-
-interface FormElements extends HTMLFormControlsCollection {
-  usernameInput: HTMLInputElement;
-  usernameEmail: HTMLInputElement;
-  usernameNumber: HTMLInputElement;
-  usernameMessage: HTMLInputElement;
-}
-
-interface UsernameFormElement extends HTMLFormElement {
-  readonly elements: FormElements;
-}
 
 export default function ContactForm() {
   const [sendButtonText, setSendButtonText] = useState('Send');
@@ -23,18 +12,17 @@ export default function ContactForm() {
   const [valueDescription, setValueDescription] = useState('');
   const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = async (event: React.FormEvent) => {
+  const sendEmail = useCallback(async (event: React.FormEvent) => {
     event.preventDefault();
     if (sendButtonText === 'Message sent!') {
       return;
     }
-    const phoneValue = form.current?.querySelector<HTMLInputElement>('#usernameNumber')?.value;
     const phoneRegex = /^[+]?(\d{1,12})?$/;
     const checkFields =
-      form.current?.querySelector<UsernameFormElement>('#usernameInput')?.value &&
-      form.current?.querySelector<HTMLInputElement>('#usernameEmail')?.value &&
-      phoneValue &&
-      phoneRegex.test(phoneValue);
+      valueName &&
+      valueEmail &&
+      valuePhone &&
+      phoneRegex.test(valuePhone);
     if (checkFields) {
       await emailjs
         .send(
@@ -52,13 +40,13 @@ export default function ContactForm() {
           }
         );
     }
-  };
+  }, [sendButtonText, valueName, valueEmail, valuePhone, valueDescription]);
 
-  const refreshSendButton = () => {
+  const refreshSendButton = useCallback(() => {
     if (sendButtonText === 'Message sent!') {
       setSendButtonText('Send');
     }
-  };
+  }, [sendButtonText]);
 
   return (
     <section className="contact-section" id="contact">
