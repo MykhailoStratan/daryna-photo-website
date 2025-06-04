@@ -355,6 +355,16 @@ body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem-content .p-menuitem-l
   color: #e0e0e0;
 }
 
+body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem.p-highlight .p-menuitem-link .p-menuitem-text,
+body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem.p-highlight .p-menuitem-link .p-menuitem-icon {
+  color: #4b5563;
+}
+
+body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem:not(.p-disabled) > .p-menuitem-content:hover .p-menuitem-link .p-menuitem-text,
+body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem:not(.p-disabled) > .p-menuitem-content:hover .p-menuitem-link .p-menuitem-icon {
+  color: #ffffff;
+}
+
 body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover {
   background-color: #505050;
 }
