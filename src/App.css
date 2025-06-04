@@ -318,11 +318,11 @@ body.dark-mode .card-custom-menu {
 }
 
 body.dark-mode .p-menuitem-content a span {
-  color: #e0e0e0;
+  color: #fff;
 }
 
 body.dark-mode .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text {
-  color: #333;
+  color: #fff;
 }
 
 body.dark-mode .p-menubar .p-menubar-root-list > .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover .p-menuitem-link .p-menuitem-text {
