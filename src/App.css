@@ -318,15 +318,22 @@ body.dark-mode .card-custom-menu {
 }
 
 body.dark-mode .p-menuitem-content a span {
-  color: #fff;
-}
-
-body.dark-mode .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text {
-  color: #fff;
-}
-
-body.dark-mode .p-menubar .p-menubar-root-list > .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover .p-menuitem-link .p-menuitem-text {
   color: #333;
+}
+
+body.dark-mode .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link {
+  text-decoration: none;
+}
+
+body.dark-mode .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text,
+body.dark-mode .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-icon {
+  color: #333;
+}
+
+body.dark-mode .p-menubar .p-menubar-root-list > .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover .p-menuitem-link .p-menuitem-text,
+body.dark-mode .p-menubar .p-menubar-root-list > .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover .p-menuitem-link .p-menuitem-icon {
+  color: #fff;
+  text-decoration: none;
 }
 
 body.dark-mode .social-media-icon {
