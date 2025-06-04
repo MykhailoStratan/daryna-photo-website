@@ -28,29 +28,25 @@ export default function ContactForm() {
     if (sendButtonText === 'Message sent!') {
       return;
     }
-    const phoneValue = form.current?.querySelector<HTMLInputElement>('#usernameNumber')?.value;
     const phoneRegex = /^[+]?(\d{1,12})?$/;
-    const checkFields =
-      form.current?.querySelector<UsernameFormElement>('#usernameInput')?.value &&
-      form.current?.querySelector<HTMLInputElement>('#usernameEmail')?.value &&
-      phoneValue &&
-      phoneRegex.test(phoneValue);
+    const checkFields = valueName && valueEmail && phoneRegex.test(valuePhone);
     if (checkFields) {
-      await emailjs
-        .send(
+      try {
+        await emailjs.send(
           import.meta.env.VITE_EMAIL_SERVICE_ID,
           import.meta.env.VITE_EMAIL_TEMPLATE_ID,
-          { from_name: valueName, message: valueDescription, phone_number: valuePhone, email: valueEmail },
-          import.meta.env.VITE_EMAIL_PUBLIC_KEY
-        )
-        .then(
-          () => {
-            setSendButtonText('Message sent!');
+          {
+            from_name: valueName,
+            message: valueDescription,
+            phone_number: valuePhone,
+            email: valueEmail,
           },
-          () => {
-            // handle error
-          }
+          import.meta.env.VITE_EMAIL_PUBLIC_KEY
         );
+        setSendButtonText('Message sent!');
+      } catch {
+        // handle error
+      }
     }
   };
 
