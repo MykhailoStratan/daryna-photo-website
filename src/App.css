@@ -337,6 +337,19 @@ body.dark-mode .social-media-icon {
   filter: invert(0.8);
 }
 
+/* Remove default highlight color from mobile menu items */
+.p-menubar .p-menubar-root-list .p-menuitem.p-highlight > .p-menuitem-content {
+  background-color: transparent;
+}
+
+.p-menubar .p-menubar-root-list .p-menuitem.p-highlight > .p-menuitem-content .p-menuitem-link .p-menuitem-text {
+  color: #4b5563;
+}
+
+.p-menubar .p-menubar-root-list .p-menuitem.p-highlight > .p-menuitem-content .p-menuitem-link .p-menuitem-icon {
+  color: #6b7280;
+}
+
 /* Dark mode styling for mobile menubar */
 body.dark-mode .p-menubar .p-menubar-button {
   color: #e0e0e0;
@@ -358,6 +371,10 @@ body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem-content .p-menuitem-l
 body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem.p-highlight .p-menuitem-link .p-menuitem-text,
 body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem.p-highlight .p-menuitem-link .p-menuitem-icon {
   color: #4b5563;
+}
+
+body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem.p-highlight > .p-menuitem-content {
+  background-color: transparent;
 }
 
 body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem:not(.p-disabled) > .p-menuitem-content:hover .p-menuitem-link .p-menuitem-text,
