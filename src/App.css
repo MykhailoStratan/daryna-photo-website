@@ -337,6 +337,28 @@ body.dark-mode .social-media-icon {
   filter: invert(0.8);
 }
 
+/* Dark mode styling for mobile menubar */
+body.dark-mode .p-menubar .p-menubar-button {
+  color: #e0e0e0;
+  background-color: #333;
+}
+
+body.dark-mode .p-menubar .p-menubar-root-list {
+  background-color: #333;
+}
+
+body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem-content,
+body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem-content .p-menuitem-link,
+body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem-content .p-menuitem-link .p-menuitem-text,
+body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem-content .p-menuitem-link .p-menuitem-icon,
+body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+  color: #e0e0e0;
+}
+
+body.dark-mode .p-menubar .p-menubar-root-list .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover {
+  background-color: #505050;
+}
+
 body.dark-mode .btn-standard,
 body.dark-mode .package-description button,
 body.dark-mode form button {
