@@ -38,10 +38,10 @@ export default function ContactForm() {
     if (checkFields) {
       await emailjs
         .send(
-          'service_xb3e2hb',
-          'template_v05ze2p',
+          import.meta.env.VITE_EMAIL_SERVICE_ID,
+          import.meta.env.VITE_EMAIL_TEMPLATE_ID,
           { from_name: valueName, message: valueDescription, phone_number: valuePhone, email: valueEmail },
-          'z1YXTwT-sFp7R5tpZ'
+          import.meta.env.VITE_EMAIL_PUBLIC_KEY
         )
         .then(
           () => {
